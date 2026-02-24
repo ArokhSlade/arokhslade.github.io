@@ -1,0 +1,9 @@
+- name: Home
+  link: /
+- name: Projects
+  link: /projects/
+  sub_pages:
+    - name: Armachinko
+      link: /projects/armachinko/
+    - name: Barque of Ra
+      link: /projects/barque-of-ra/

@@ -16,3 +16,20 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+
+
+<nav>
+  <ul>
+    {% assign nav_pages = site.pages | sort: "nav_order" %}
+    {% for p in nav_pages %}
+      {% if p.title %}
+        <li>
+          <a href="{{ p.url | relative_url }}" 
+             class="{% if page.url == p.url %}active{% endif %}">
+             {{ p.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
